@@ -1,24 +1,26 @@
 #include<stdio.h>
+#include<math.h>
 
-void namaste();
-void bonjour();
+float squareArea(float side);
+float circleArea(float radius);
+float rectangleArea(float a, float b);
 
 int main() {
-    printf("enter i for indian and f for french");
-    char ch;
-    scanf("%c", &ch);
-    if(ch == 'i'){
-        namaste();
-    } else{
-        bonjour();
-    }
+    float radius = 5;
+
+    printf("area is : %f", circleArea(radius));
+    
     return 0;
 }
 
-void namaste() {
-    printf("Namaste");
+float squareArea(float side){
+    return side * side;
 }
 
-void bonjour() {
-    printf("Bonjour");
+float circleArea(float radius){
+    return 3.14 * radius * radius;
+}
+
+float rectangleArea(float a, float b){
+    return a * b;
 }
